@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Silva - Consultor e Desenvolvedor</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Fonte Poppins do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
+    <!-- Cabeçalho / Navegação Fixa -->
     <header id="home">
         <div class="container header-content">
             <a href="#home" class="logo">Lucas Silva<span>.dev</span></a>
@@ -21,6 +24,7 @@
                     <li><a href="#habilidades">Habilidades</a></li>
                     <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#servicos">Como Posso Ajudar</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#contato" class="btn-contato">Contato</a></li>
                 </ul>
             </nav>
@@ -28,7 +32,15 @@
     </header>
 
     <main>
+        <!-- Seção 1: Banner Principal (Início) -->
         <section id="banner" class="hero-section">
+            <!-- VÍDEO DE FUNDO -->
+            <video autoplay loop muted playsinline class="background-video">
+                <source src="videos/video-dev.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+            <div class="video-overlay"></div> <!-- Overlay para opacidade -->
+
             <div class="container hero-content">
                 <div class="text-content">
                     <h1><small>Transformando</small><br>Ideias em Soluções <span class="highlight">Inteligentes</span></h1>
@@ -36,22 +48,55 @@
                     <a href="#contato" class="btn-primary">Entre em Contato</a>
                 </div>
                 <div class="image-content">
+                    <!-- Sua foto profissional aqui -->
                     <img src="assets/Foto-Lucas-Escarabote.jpg" alt="Lucas Silva - Consultor e Desenvolvedor">
                 </div>
             </div>
         </section>
 
+        <!-- Seção 2: Sobre Mim -->
         <section id="sobre" class="about-section">
             <div class="container">
-                <h2>Sobre Mim</h2>
+                <h2>O que oferecemos para ajudar a sua empresa a crescer</h2>
                 <div class="about-content">
-                    <p>Sou Lucas Silva, engenheiro civil e analista financeiro, apaixonado por economia, dados e por resolver problemas reais com soluções inteligentes e aplicáveis. Minha jornada me permitiu unir o rigor da engenharia, a visão estratégica das finanças e a capacidade transformadora da tecnologia.</p>
-                    <p>Como pai, marido e cristão presbiteriano e calvinista, valorizo a integridade, a dedicação e o impacto positivo em tudo o que faço. Acredito que a tecnologia, quando bem aplicada, pode ser uma ferramenta poderosa para gerar eficiência e crescimento sustentável.</p>
-                    <p>Meu objetivo é guiar empresas e profissionais a tirar suas ideias do papel, otimizando processos e transformando dados em decisões estratégicas.</p>
+                    <p>Desenvolvo <strong>soluções digitais 100% especializadas</strong>, sejam sistemas web ou automações, que se adaptam aos seus processos e necessidades. <strong>Eu alio a sua expertise de negócio com o meu know-how técnico</strong>, gerando sistemas que trazem benefícios concretos para a sua empresa.</p>
+                    <p>Meu papel principal é <strong>compreender a necessidade de cada cliente</strong> e criar uma solução que atenda de forma certeira, tirando suas ideias do papel e transformando-as em realidade.</p>
+                    <img src="assets/desenvolvendo-web.png" alt="Desenvolvimento de Soluções Digitais" class="about-image">
                 </div>
             </div>
         </section>
 
+        <!-- Seção: Por que meus projetos dão certo? (Inspirado na Innspire) -->
+        <section id="porque-projetos" class="why-projects-section">
+            <div class="container">
+                <h2>Por que nossos projetos dão certo?</h2>
+                <div class="why-projects-grid">
+                    <div class="why-card">
+                        <img src="assets/icones-gerais/expertise.svg" alt="Expertise Icon">
+                        <h3>Expertise Estratégica</h3>
+                        <p>Aliamos conhecimento de negócio e técnico para soluções que realmente funcionam e escalam.</p>
+                    </div>
+                    <div class="why-card">
+                        <img src="assets/icones-gerais/qualidade.svg" alt="Qualidade Icon">
+                        <h3>Qualidade e Compromisso</h3>
+                        <p>Equipe dedicada a entregar excelência e resultados consistentes, com foco nos seus objetivos.</p>
+                    </div>
+                    <div class="why-card">
+                        <img src="assets/icones-gerais/agilidade.svg" alt="Agilidade Icon">
+                        <h3>Metodologia Ágil</h3>
+                        <p>Entregas contínuas e acompanhamento em tempo real, garantindo flexibilidade e transparência.</p>
+                    </div>
+                    <div class="why-card">
+                        <img src="assets/icones-gerais/conexao.svg" alt="Conexão Icon">
+                        <h3>Conexão Genuína</h3>
+                        <p>Foco total em entender suas reais necessidades para construir a solução perfeita para você.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seção 3: Habilidades / Stacks -->
         <section id="habilidades" class="skills-section">
             <div class="container">
                 <h2>Minhas Habilidades</h2>
@@ -85,16 +130,19 @@
                         <p>Consultoria</p>
                     </div>
                     <div class="skill-card">
-                        <img src="assets/icones-habilidades/desenvolvimento_web.svg" alt="Desenvolvimento Web Icon">
+                        <!-- ÍCONE CORRIGIDO AQUI -->
+                        <img src="assets/icones-habilidades/desenvolvendo-web.svg" alt="Desenvolvimento Web Icon">
                         <p>Desenvolvimento Web</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Seção 4: Projetos (Showcase) -->
         <section id="projetos" class="projects-section">
             <div class="container">
                 <h2>Meus Projetos em Destaque</h2>
+                <!-- Projeto 1: Controle de Horas -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="assets/projeto-controle-horas.png" alt="Sistema de Controle de Horas">
@@ -107,9 +155,12 @@
                         <p><strong>Valor Gerado:</strong> Otimização da gestão do tempo, clareza em KPIs, automação de relatórios estratégicos e insights acionáveis para a tomada de decisões.</p>
                         <div class="project-links">
                             <a href="https://controle-horas-cm-gflyaqpadrr9tzjjnznpyq.streamlit.app/" target="_blank" class="btn-secondary">Ver Sistema Online</a>
-                            </div>
+                            <!-- <a href="LINK_DO_VIDEO_AQUI" target="_blank" class="btn-secondary">Ver Vídeo Demo</a> -->
+                        </div>
                     </div>
                 </div>
+
+                <!-- Projeto 2: Automações AirLançando -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="assets/projeto-airlocando.png" alt="Automações AirLançando">
@@ -121,12 +172,49 @@
                         <p><strong>Tecnologias:</strong> Python, Excel, Google Apps Script, Power BI (DAX, M), HTML/CSS/JS, SQL.</p>
                         <p><strong>Valor Gerado:</strong> Automação de conciliações financeiras, recuperação de receita (ex: R$ 200 mil identificados), otimização de custos logísticos (motoboy vs. Uber), e provisão de dados para tomada de decisão estratégica.</p>
                         <div class="project-links">
-                            </div>
+                            <!-- <a href="#" target="_blank" class="btn-secondary">Ver Mais</a> -->
+                        </div>
                     </div>
                 </div>
+
+                <!-- Projeto 3: Site Institucional -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/site-institucional-portfolio-lucas-silva-dev.png" alt="Site Institucional">
+                    </div>
+                    <div class="project-details">
+                        <h3>Desenvolvimento de Site Institucional</h3>
+                        <p class="project-subtitle">Case: Empresa de Consultoria (Exemplo)</p>
+                        <p><strong>Problema Resolvido:</strong> Falta de presença digital estratégica e dificuldade em converter visitantes em leads qualificados.</p>
+                        <p><strong>Tecnologias:</strong> HTML5, CSS3, JavaScript, Responsividade.</p>
+                        <p><strong>Valor Gerado:</strong> Criação de uma plataforma online moderna e otimizada para captação de clientes, com design intuitivo e informações claras sobre os serviços oferecidos.</p>
+                        <div class="project-links">
+                            <!-- <a href="#" target="_blank" class="btn-secondary">Ver Site</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 4: Landing Page de Alta Conversão -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/landing-page-portfolio-lucas-silva-dev.png" alt="Landing Page de Conversão">
+                    </div>
+                    <div class="project-details">
+                        <h3>Criação de Landing Page de Alta Conversão</h3>
+                        <p class="project-subtitle">Case: Campanha de Marketing Digital (Exemplo)</p>
+                        <p><strong>Problema Resolvido:</strong> Baixa taxa de conversão em campanhas de marketing e dificuldade em coletar dados de leads interessados.</p>
+                        <p><strong>Tecnologias:</strong> HTML5, CSS3 (Tailwind CSS), JavaScript (Formulários), Otimização SEO.</p>
+                        <p><strong>Valor Gerado:</strong> Desenvolvimento de uma página de destino focada em um único objetivo, resultando em aumento significativo de leads e melhor retorno sobre o investimento em publicidade.</p>
+                        <div class="project-links">
+                            <!-- <a href="#" target="_blank" class="btn-secondary">Ver Landing Page</a> -->
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
+        <!-- Seção 5: Como Posso Ajudar / Serviços -->
         <section id="servicos" class="services-section">
             <div class="container">
                 <h2>Como Posso Ajudar Sua Empresa</h2>
@@ -142,7 +230,8 @@
                         <p>Criação de sistemas personalizados, automação de tarefas com Python, e desenvolvimento de ferramentas para otimizar suas operações.</p>
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-desktop"></i> <h3>Desenvolvimento Web</h3>
+                        <i class="fas fa-desktop"></i>
+                        <h3>Desenvolvimento Web</h3>
                         <p>Criação de sites e aplicações web interativas e funcionais para sua presença online e ferramentas internas.</p>
                     </div>
                     <div class="service-card">
@@ -154,19 +243,86 @@
             </div>
         </section>
 
-        <section id="contato" class="contact-section">
+        <!-- Seção 6: Blog -->
+        <section id="blog" class="blog-section">
             <div class="container">
-                <h2>Entre em Contato</h2>
-                <p>Vamos conversar sobre como podemos tirar suas ideias do papel e resolver os desafios da sua empresa.</p>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> E-mail: lucas.silvaescarabote@gmail.com</p>
-                    <p><i class="fas fa-phone-alt"></i> Telefone: (11) 99388-6246</p>
-                    <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/lucas-silva-escarabote/" target="_blank">linkedin.com/in/lucas-silva-escarabote/</a></p>
+                <h2>Últimos Posts do Blog</h2>
+                <p>Aqui você encontrará artigos sobre insights de mercado, tendências em tecnologia e dicas de gestão para impulsionar seu negócio.</p>
+                <div class="blog-grid">
+                    <div class="blog-post-card">
+                        <h3>A Importância da Automação Financeira em PMEs</h3>
+                        <p class="blog-date">15 de Junho, 2025</p>
+                        <p>Descubra como a automação pode revolucionar o setor financeiro da sua pequena e média empresa...</p>
+                        <a href="#" class="btn-secondary">Ler Mais</a>
+                    </div>
+                    <div class="blog-post-card">
+                        <h3>KPIs Essenciais para Gestores de Projetos</h3>
+                        <p class="blog-date">01 de Julho, 2025</p>
+                        <p>Conheça as métricas que realmente importam para acompanhar a performance dos seus projetos...</p>
+                        <a href="#" class="btn-secondary">Ler Mais</a>
+                    </div>
+                    <div class="blog-post-card">
+                        <h3>Como a Análise de Dados Impulsiona Vendas</h3>
+                        <p class="blog-date">20 de Julho, 2025</p>
+                        <p>Entenda como transformar dados de vendas em estratégias eficazes para aumentar seu faturamento...</p>
+                        <a href="#" class="btn-secondary">Ler Mais</a>
+                    </div>
                 </div>
+                <a href="#" class="btn-primary" style="margin-top: 40px;">Ver Todos os Posts</a>
+            </div>
+        </section>
+
+
+        <!-- Seção 7: Contato (Nova Seção de Conversão) -->
+        <section id="contato" class="call-to-action-section">
+            <div class="container cta-content-grid">
+                <div class="cta-text-area">
+                    <h2>TENHA UM TIME DE TECNOLOGIA 100% FOCADO NO SEU NEGÓCIO</h2>
+                    <p>Transforme seus dados em lucro! Soluções customizadas para alavancar seu negócio com inteligência e proatividade.</p>
+                    <div class="cta-metrics-grid">
+                        <div class="metric-item">
+                            <span class="metric-value">10+</span>
+                            <span class="metric-label">Projetos de sucesso entregues</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">500+</span>
+                            <span class="metric-label">Horas de consultoria e desenvolvimento</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">Resultados</span>
+                            <span class="metric-label">Comprovados em eficiência e rentabilidade</span>
+                        </div>
+                    </div>
                 </div>
+                <div class="cta-form-area">
+                    <h3>Vamos conversar</h3>
+                    <p>Lucas Silva está pronto para tirar seu projeto do papel.</p>
+                    <form class="cta-form">
+                        <div class="form-group">
+                            <label for="cta-nome">Seu nome e sobrenome*</label>
+                            <input type="text" id="cta-nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cta-email">Seu e-mail corporativo*</label>
+                            <input type="email" id="cta-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cta-celular">Seu celular*</label>
+                            <input type="tel" id="cta-celular" name="celular" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="cta-projeto">Conte para nós mais sobre seu projeto</label>
+                            <textarea id="cta-projeto" name="projeto" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-cta-submit">SOLICITAR CONTATO</button>
+                    </form>
+                    <p class="form-note">Ao enviar este formulário, concordo com os termos de privacidade.</p>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer>
         <div class="container footer-content">
             <p>© 2025 Lucas Silva. Todos os direitos reservados.</p>
@@ -174,6 +330,7 @@
         </div>
     </footer>
 
+    <!-- Script para rolagem suave -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
