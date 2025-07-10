@@ -35,7 +35,16 @@
 
     <main>
       <section id="banner" class="hero-section">
-        <video autoplay loop muted playsinline class="background-video">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="background-video"
+          poster="assets/video-poster.webp"
+        >
+          <!-- Sugiro criar uma versão .webm do seu vídeo para melhor compatibilidade/tamanho -->
+          <source src="assets/video-dev.webm" type="video/webm" />
           <source src="assets/video-dev.mp4" type="video/mp4" />
           Seu navegador não suporta vídeos HTML5.
         </video>
@@ -55,7 +64,7 @@
           </div>
           <div class="image-content">
             <img
-              src="assets/Foto-Lucas-Escarabote.jpg"
+              src="assets/Foto-Lucas-Escarabote.webp"
               alt="Lucas Silva - Consultor e Desenvolvedor"
             />
           </div>
@@ -83,9 +92,10 @@
               papel e transformando-as em realidade.
             </p>
             <img
-              src="assets/desenvolvendo-web.png"
+              src="assets/desenvolvendo-web.webp"
               alt="Desenvolvimento de Soluções Digitais"
               class="about-image"
+              loading="lazy"
             />
           </div>
         </div>
@@ -218,8 +228,9 @@
               data-modal="modal-1"
             >
               <img
-                src="assets/projeto-controle-horas.png"
+                src="assets/projeto-controle-horas.webp"
                 alt="Sistema de Controle de Horas"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-overlay-text">
@@ -235,8 +246,9 @@
               data-modal="modal-2"
             >
               <img
-                src="assets/projeto-airlocando.png"
+                src="assets/projeto-airlocando.webp"
                 alt="Automações AirLançando"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-overlay-text">
@@ -252,8 +264,9 @@
               data-modal="modal-3"
             >
               <img
-                src="assets/site-institucional-portfolio-lucas-silva-dev.png"
+                src="assets/site-institucional-portfolio-lucas-silva-dev.webp"
                 alt="Site Institucional"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-overlay-text">
@@ -269,8 +282,9 @@
               data-modal="modal-4"
             >
               <img
-                src="assets/landing-page-portfolio-lucas-silva-dev.png"
+                src="assets/landing-page-portfolio-lucas-silva-dev.webp"
                 alt="Landing Page de Conversão"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-overlay-text">
@@ -428,7 +442,12 @@
           <div class="cta-form-area">
             <h3>Vamos conversar</h3>
             <p>Lucas Silva está pronto para tirar seu projeto do papel.</p>
-            <form class="cta-form">
+            <!-- FORMULÁRIO AJUSTADO COM ACTION PARA FORMSPREE -->
+            <form
+              class="cta-form"
+              action="https://formspree.io/f/mvgreple"
+              method="POST"
+            >
               <div class="form-group">
                 <label for="cta-nome">Seu nome e sobrenome*</label>
                 <input type="text" id="cta-nome" name="nome" required />
@@ -463,9 +482,10 @@
       <div class="modal-content">
         <span class="modal-close">&times;</span>
         <img
-          src="assets/projeto-controle-horas.png"
+          src="assets/projeto-controle-horas.webp"
           alt="Sistema de Controle de Horas"
           class="modal-image"
+          loading="lazy"
         />
         <div class="modal-body">
           <h3 class="modal-title">Sistema de Controle de Horas por Projeto</h3>
@@ -499,9 +519,10 @@
       <div class="modal-content">
         <span class="modal-close">&times;</span>
         <img
-          src="assets/projeto-airlocando.png"
+          src="assets/projeto-airlocando.webp"
           alt="Automações AirLançando"
           class="modal-image"
+          loading="lazy"
         />
         <div class="modal-body">
           <h3 class="modal-title">Automações e Análises Estratégicas</h3>
@@ -528,9 +549,10 @@
       <div class="modal-content">
         <span class="modal-close">&times;</span>
         <img
-          src="assets/site-institucional-portfolio-lucas-silva-dev.png"
+          src="assets/site-institucional-portfolio-lucas-silva-dev.webp"
           alt="Site Institucional"
           class="modal-image"
+          loading="lazy"
         />
         <div class="modal-body">
           <h3 class="modal-title">Desenvolvimento de Site Institucional</h3>
@@ -556,9 +578,10 @@
       <div class="modal-content">
         <span class="modal-close">&times;</span>
         <img
-          src="assets/landing-page-portfolio-lucas-silva-dev.png"
+          src="assets/landing-page-portfolio-lucas-silva-dev.webp"
           alt="Landing Page de Conversão"
           class="modal-image"
+          loading="lazy"
         />
         <div class="modal-body">
           <h3 class="modal-title">Criação de Landing Page de Alta Conversão</h3>
