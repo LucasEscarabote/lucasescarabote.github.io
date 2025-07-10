@@ -35,7 +35,19 @@
 
     <main>
       <section id="banner" class="hero-section">
-        <!-- VÍDEO REMOVIDO - Fundo agora definido por cor hexadecimal no CSS -->
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="background-video"
+          poster="assets/video-poster.webp"
+        >
+          <!-- Sugiro criar uma versão .webm do seu vídeo para melhor compatibilidade/tamanho -->
+          <source src="assets/video-dev.webm" type="video/webm" />
+          <source src="assets/video-dev.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeos HTML5.
+        </video>
         <div class="video-overlay"></div>
 
         <div class="container hero-content">
@@ -360,9 +372,7 @@
                 Descubra como a automação pode revolucionar o setor financeiro
                 da sua pequena e média empresa...
               </p>
-              <a href="automacao-financeira-pme.html" class="btn-secondary"
-                >Ler Mais</a
-              >
+              <a href="#" class="btn-secondary">Ler Mais</a>
             </div>
             <div class="blog-post-card">
               <h3>KPIs Essenciais para Gestores de Projetos</h3>
