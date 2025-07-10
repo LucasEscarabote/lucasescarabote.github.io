@@ -1,240 +1,167 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // --- LÓGICA PARA OS MODAIS DE PROJETOS ---
 
-  // --- LÓGICA PARA OS MODAIS DE PROJETOS ---
+  const projectCards = document.querySelectorAll(".project-card-new");
 
-  const projectCards = document.querySelectorAll(".project-card-new");
+  const modals = document.querySelectorAll(".modal-backdrop");
 
-  const modals = document.querySelectorAll(".modal-backdrop");
+  const body = document.body;
 
-  const body = document.body;
+  projectCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const modalId = card.getAttribute("data-modal");
 
+      const modal = document.getElementById(modalId);
 
+      if (modal) {
+        // ATUALIZADO: Altera o estilo 'display' para mostrar o modal
 
-  projectCards.forEach((card) => {
+        modal.style.display = "flex";
 
-    card.addEventListener("click", () => {
+        body.style.overflow = "hidden"; // Impede o scroll da página ao fundo
+      }
+    });
+  });
 
-      const modalId = card.getAttribute("data-modal");
+  modals.forEach((modal) => {
+    // Evento para fechar no botão 'x'
 
-      const modal = document.getElementById(modalId);
+    const closeButton = modal.querySelector(".modal-close");
 
-      if (modal) {
+    if (closeButton) {
+      closeButton.addEventListener("click", () => {
+        // ATUALIZADO: Altera o estilo 'display' para esconder o modal
 
-        // ATUALIZADO: Altera o estilo 'display' para mostrar o modal
+        modal.style.display = "none";
 
-        modal.style.display = "flex";
+        body.style.overflow = "auto"; // Restaura o scroll
+      });
+    } // Evento para fechar clicando fora do modal (no backdrop)
 
-        body.style.overflow = "hidden"; // Impede o scroll da página ao fundo
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        // ATUALIZADO: Altera o estilo 'display' para esconder o modal
 
-      }
+        modal.style.display = "none";
 
-    });
+        body.style.overflow = "auto"; // Restaura o scroll
+      }
+    });
+  }); // --- LÓGICA PARA O FILTRO DE PROJETOS ---
 
-  });
+  const filterButtons = document.querySelectorAll(".filter-btn");
 
+  const projects = document.querySelectorAll(".project-card-new");
 
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Remove a classe 'active' de todos os botões
 
-  modals.forEach((modal) => {
+      filterButtons.forEach((btn) => btn.classList.remove("active")); // Adiciona 'active' ao botão clicado
 
-    // Evento para fechar no botão 'x'
+      this.classList.add("active");
 
-    const closeButton = modal.querySelector(".modal-close");
+      const filter = this.getAttribute("data-filter");
 
-    if (closeButton) {
+      projects.forEach((project) => {
+        const category = project.getAttribute("data-category");
 
-      closeButton.addEventListener("click", () => {
-
-        // ATUALIZADO: Altera o estilo 'display' para esconder o modal
-
-        modal.style.display = "none";
-
-        body.style.overflow = "auto"; // Restaura o scroll
-
-      });
-
-    }
-
-
-
-    // Evento para fechar clicando fora do modal (no backdrop)
-
-    modal.addEventListener("click", function (event) {
-
-      if (event.target === modal) {
-
-        // ATUALIZADO: Altera o estilo 'display' para esconder o modal
-
-        modal.style.display = "none";
-
-        body.style.overflow = "auto"; // Restaura o scroll
-
-      }
-
-    });
-
-  });
-
-
-
-  // --- LÓGICA PARA O FILTRO DE PROJETOS ---
-
-  const filterButtons = document.querySelectorAll(".filter-btn");
-
-  const projects = document.querySelectorAll(".project-card-new");
-
-
-
-  filterButtons.forEach((button) => {
-
-    button.addEventListener("click", function () {
-
-      // Remove a classe 'active' de todos os botões
-
-      filterButtons.forEach((btn) => btn.classList.remove("active"));
-
-      // Adiciona 'active' ao botão clicado
-
-      this.classList.add("active");
-
-
-
-      const filter = this.getAttribute("data-filter");
-
-
-
-      projects.forEach((project) => {
-
-        const category = project.getAttribute("data-category");
-
-        if (filter === "all" || category.includes(filter)) {
-
-          project.classList.remove("hide");
-
-        } else {
-
-          project.classList.add("hide");
-
-        }
-
-      });
-
-    });
-
-  });
-
-
-
-  // --- LÓGICA PARA O FORMULÁRIO DE CONTATO (AJAX) ---
-
-  const form = document.getElementById("contactForm");
-
-  const formMessage = document.getElementById("formMessage");
-
-
-
-  if (form) {
-
-    form.addEventListener("submit", function (e) {
-
-      e.preventDefault(); // Impede o recarregamento da página
-
-
-
-      const submitButton = form.querySelector('button[type="submit"]');
-
-      const originalButtonText = submitButton.textContent;
-
-      submitButton.textContent = "Enviando...";
-
-      submitButton.disabled = true;
-
-
-
-      const formData = new FormData(form);
-
-      const data = {};
-
-      formData.forEach((value, key) => {
-
-        data[key] = value;
-
-      });
-
-
-
-      fetch(form.action, {
-
-        method: "POST",
-
-        body: JSON.stringify(data), // Envia os dados como JSON
-
-        headers: {
-
-          "Content-Type": "text/plain;charset=utf-8", // Tipo de conteúdo para o Google Apps Script
-
-        },
-
-      })
-
-        .then((response) => response.json())
-
-        .then((data) => {
-
-          if (data.result === "success") {
-
-            form.reset(); // Limpa o formulário
-
-            formMessage.textContent = "Mensagem enviada com sucesso! Obrigado.";
-
-            formMessage.className = "form-message success";
-
-            formMessage.style.display = "block";
-
-          } else {
-
-            throw new Error(data.message || "Ocorreu um erro.");
-
-          }
-
-        })
-
-        .catch((error) => {
-
-          formMessage.textContent =
-
-            "Erro ao enviar a mensagem. Tente novamente.";
-
-          formMessage.className = "form-message error";
-
-          formMessage.style.display = "block";
-
-          console.error("Error:", error);
-
-        })
-
-        .finally(() => {
-
-          submitButton.textContent = originalButtonText;
-
-          submitButton.disabled = false;
-
-          // Esconde a mensagem após alguns segundos
-
-          setTimeout(() => {
-
-            formMessage.style.display = "none";
-
-          }, 5000);
-
-        });
-
-    });
-
-  }
-
-});
-        }, 5000);
+        if (filter === "all" || category.includes(filter)) {
+          project.classList.remove("hide");
+        } else {
+          project.classList.add("hide");
+        }
       });
     });
+  }); // --- LÓGICA PARA O FORMULÁRIO DE CONTATO (AJAX) ---
+
+  const form = document.getElementById("contactForm");
+
+  const formMessage = document.getElementById("formMessage");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Impede o recarregamento da página
+
+      const submitButton = form.querySelector('button[type="submit"]');
+
+      const originalButtonText = submitButton.textContent;
+
+      submitButton.textContent = "Enviando...";
+
+      submitButton.disabled = true;
+
+      const formData = new FormData(form);
+
+      const data = {};
+
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+
+      fetch(form.action, {
+        method: "POST",
+
+        body: JSON.stringify(data), // Envia os dados como JSON
+
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8", // Tipo de conteúdo para o Google Apps Script
+        },
+      })
+        .then((response) => response.json())
+
+        .then((data) => {
+          if (data.result === "success") {
+            form.reset(); // Limpa o formulário
+
+            formMessage.textContent = "Mensagem enviada com sucesso! Obrigado.";
+
+            formMessage.className = "form-message success";
+
+            formMessage.style.display = "block";
+          } else {
+            throw new Error(data.message || "Ocorreu um erro.");
+          }
+        })
+
+        .catch((error) => {
+          formMessage.textContent =
+            "Erro ao enviar a mensagem. Tente novamente.";
+
+          formMessage.className = "form-message error";
+
+          formMessage.style.display = "block";
+
+          console.error("Error:", error);
+        })
+
+        .finally(() => {
+          submitButton.textContent = originalButtonText;
+
+          submitButton.disabled = false; // Esconde a mensagem após alguns segundos
+
+          setTimeout(() => {
+            formMessage.style.display = "none";
+          }, 5000);
+        });
+    });
   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("menu");
+  const menuLinks = menu.querySelectorAll("a"); // Seleciona todos os links dentro do menu
+
+  // Alterna a exibição do menu ao clicar no botão
+  menuToggle.addEventListener("click", function () {
+    menu.classList.toggle("show"); // Adiciona ou remove a classe 'show'
+  });
+
+  // Fecha o menu ao clicar em qualquer link
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      menu.classList.remove("show"); // Remove a classe 'show' para esconder o menu
+    });
+  });
 });
