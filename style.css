@@ -1119,3 +1119,59 @@ footer {
 .blog-item-content .btn-secondary {
   align-self: flex-start; /* Alinha o botão à esquerda */
 }
+/* --- Estilos de Conversão para Posts do Blog --- */
+
+/* Caixa de CTA no Final do Post */
+.cta-blog-box {
+  background-color: #f0f4f8;
+  border-left: 5px solid var(--primary-color);
+  padding: 30px;
+  margin: 50px 0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cta-blog-box h3 {
+  color: var(--dark-background);
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.cta-blog-box p {
+  color: #333;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+/* Caixa do Autor */
+.author-box {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 40px;
+  border: 1px solid #e0e0e0;
+}
+
+.author-box img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-box .author-info h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.4em;
+  color: var(--dark-background);
+}
+
+.author-box .author-info p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.5;
+}

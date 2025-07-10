@@ -10,6 +10,128 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Estilos específicos para a página do blog post */
+        .blog-post-container {
+            max-width: 900px;
+            margin: 120px auto 80px auto;
+            padding: 40px 30px;
+            background-color: #fff; /* Fundo branco para melhor legibilidade */
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            color: var(--text-dark); /* Texto escuro sobre fundo claro */
+            line-height: 1.8;
+        }
+        .blog-post-header .blog-post-category {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .blog-post-container h1 {
+            font-size: 3.2em;
+            margin-bottom: 15px;
+            color: var(--dark-background);
+            text-align: left;
+            padding-top: 0;
+            line-height: 1.2;
+        }
+        .blog-post-meta {
+            text-align: left;
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .blog-post-banner-image {
+             width: 100%;
+             height: auto;
+             border-radius: 10px;
+             margin-bottom: 40px;
+        }
+        .blog-post-content h2,
+        .blog-post-content h3,
+        .blog-post-content h4 {
+            text-align: left;
+            color: var(--dark-background);
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .blog-post-content h2 { font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 10px;}
+        .blog-post-content h3 { font-size: 1.8em; }
+        .blog-post-content h4 { font-size: 1.5em; }
+
+        .blog-post-content p, 
+        .blog-post-content ul li {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #333;
+            text-align: left;
+        }
+        .blog-post-content strong {
+            color: var(--primary-color);
+        }
+        .blog-post-content ul {
+            list-style-position: inside;
+            padding-left: 0;
+            margin-bottom: 25px;
+        }
+        
+        /* --- ESTILOS DE CONVERSÃO --- */
+        .cta-blog-box {
+            background-color: #f0f4f8;
+            border-left: 5px solid var(--primary-color);
+            padding: 30px;
+            margin: 50px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .cta-blog-box h3 {
+            color: var(--dark-background);
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .cta-blog-box p {
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 40px;
+            border: 1px solid #e0e0e0;
+        }
+        .author-box img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .author-box .author-info h4 {
+            margin: 0 0 10px 0;
+            font-size: 1.4em;
+            color: var(--dark-background);
+            text-align: left;
+        }
+        .author-box .author-info p {
+            margin: 0;
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.5;
+            text-align: left;
+        }
+        .blog-post-footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
@@ -44,14 +166,14 @@
                 <!-- Conteúdo do Artigo -->
                 <div class="blog-post-content">
                     <h2>Sua empresa vende no escuro? É hora de acender a luz dos dados.</h2>
-                    <p>Muitos gestores talentosos ainda pilotam suas áreas comerciais baseados em intuição, experiência e na "sensação" do mercado. Embora a experiência seja valiosa, confiar apenas nela é como navegar em uma tempestade sem instrumentos. Você pode até chegar ao destino, mas o risco de se perder ou de não aproveitar a melhor rota é imenso. A análise de dados é a luz que ilumina o caminho, transformando o "eu acho" em "os dados mostram que". Ela permite que você entenda não apenas *o que* está acontecendo com suas vendas, mas *por que* está acontecendo, e o mais importante: *o que fazer a seguir*.</p>
+                    <p>Muitos gestores talentosos ainda pilotam suas áreas comerciais baseados em intuição, experiência e na "sensação" do mercado. Embora a experiência seja valiosa, confiar apenas nela é como navegar em uma tempestade sem instrumentos. A análise de dados é a luz que ilumina o caminho, transformando o "eu acho" em "os dados mostram que".</p>
 
                     <h3>Onde está o ouro? As fontes de dados que sua empresa já possui</h3>
                     <p>Você não precisa de um laboratório de ciência de dados para começar. O "ouro" muitas vezes já está dentro de casa, esperando para ser garimpado. Fontes comuns e ricas em insights incluem:</p>
                     <ul>
-                        <li><strong>Seu sistema de CRM ou planilha de vendas:</strong> Quem são seus clientes? De onde eles vêm? Qual o valor médio de compra? Qual o ciclo de venda?</li>
-                        <li><strong>Google Analytics do seu site:</strong> Quais páginas de produtos são mais visitadas? De quais canais (Google, redes sociais, direto) vêm os visitantes que mais convertem? Onde eles abandonam o processo?</li>
-                        <li><strong>Dados de Redes Sociais:</strong> Qual tipo de conteúdo gera mais engajamento? Qual o perfil demográfico dos seus seguidores mais ativos?</li>
+                        <li><strong>Seu sistema de CRM ou planilha de vendas:</strong> Quem são seus clientes? De onde eles vêm? Qual o valor médio de compra?</li>
+                        <li><strong>Google Analytics do seu site:</strong> Quais páginas de produtos são mais visitadas? De quais canais vêm os visitantes que mais convertem?</li>
+                        <li><strong>Dados de Redes Sociais:</strong> Qual tipo de conteúdo gera mais engajamento? Qual o perfil demográfico dos seus seguidores?</li>
                         <li><strong>Pesquisas de satisfação:</strong> O que seus clientes mais valorizam no seu produto? Quais são suas maiores frustrações?</li>
                     </ul>
 
@@ -59,28 +181,39 @@
                     <p>Com os dados em mãos, a mágica acontece. Aqui estão quatro estratégias diretas que você pode começar a aplicar para ver resultados concretos:</p>
                     
                     <h4>1. Defina seu Perfil de Cliente Ideal (ICP) com precisão cirúrgica</h4>
-                    <p><strong>O problema:</strong> Vender para todo mundo é não vender para ninguém. Sua equipe gasta tempo e energia com leads que nunca vão comprar.
-                    <br><strong>A solução com dados:</strong> Analise sua base de clientes atuais. Quem são os 20% de clientes que geram 80% da sua receita? Identifique padrões: qual o setor, o tamanho da empresa, o cargo do comprador? Ao criar um Perfil de Cliente Ideal (ICP) baseado em dados, você foca seus esforços de marketing e vendas exatamente em quem tem mais chance de comprar, aumentando drasticamente sua taxa de conversão.</p>
+                    <p><strong>O problema:</strong> Vender para todo mundo é não vender para ninguém. <br><strong>A solução com dados:</strong> Analise sua base de clientes. Quem são os 20% que geram 80% da sua receita? Ao criar um Perfil de Cliente Ideal (ICP) baseado em dados, você foca seus esforços de marketing e vendas exatamente em quem tem mais chance de comprar.</p>
 
                     <h4>2. Encontre e conserte os "vazamentos" do seu funil de vendas</h4>
-                    <p><strong>O problema:</strong> Você atrai muitos visitantes, mas poucos se tornam clientes. Onde eles estão desistindo?
-                    <br><strong>A solução com dados:</strong> Mapeie seu funil de vendas (ex: Visitante -> Lead -> Oportunidade -> Cliente) e meça as taxas de conversão entre cada etapa. Se você percebe que muitos leads qualificados não avançam para a proposta, talvez sua abordagem comercial precise de ajuste. Se muitos abandonam o carrinho de compras, o problema pode ser o frete ou a complexidade do checkout. Os dados mostram exatamente onde o "cano está furado" para que você possa consertá-lo.</p>
+                    <p><strong>O problema:</strong> Você atrai muitos visitantes, mas poucos se tornam clientes. Onde eles estão desistindo?<br><strong>A solução com dados:</strong> Mapeie seu funil de vendas e meça as taxas de conversão entre cada etapa. Os dados mostram exatamente onde o "cano está furado" para que você possa consertá-lo.</p>
 
                     <h4>3. Personalize ofertas e aumente o valor de cada cliente (LTV)</h4>
-                    <p><strong>O problema:</strong> Suas ofertas são genéricas e não conectam com as necessidades individuais dos clientes.
-                    <br><strong>A solução com dados:</strong> Use o histórico de compras para criar ofertas personalizadas. Um cliente que comprou o produto A tem alta probabilidade de se interessar pelo produto B. Envie e-mails segmentados com recomendações relevantes. A Amazon faz isso com maestria: "Clientes que compraram X também compraram Y". Essa tática, baseada em dados, aumenta a recompra e o Lifetime Value (LTV) de cada cliente.</p>
+                    <p><strong>O problema:</strong> Suas ofertas são genéricas e não conectam com as necessidades dos clientes.<br><strong>A solução com dados:</strong> Use o histórico de compras para criar ofertas personalizadas e segmentadas. Essa tática aumenta a recompra e o Lifetime Value (LTV) de cada cliente.</p>
 
                     <h4>4. Preveja o futuro (ou quase isso) com análise preditiva</h4>
-                    <p><strong>O problema:</strong> Você é pego de surpresa por picos ou quedas na demanda, resultando em falta de estoque ou excesso de produtos parados.
-                    <br><strong>A solução com dados:</strong> Analise seus dados históricos de vendas para identificar sazonalidades e tendências. Se você sabe que a venda de um determinado produto sempre cresce 40% no terceiro trimestre, pode planejar seu estoque e suas campanhas de marketing com antecedência. Isso otimiza o capital de giro e maximiza as oportunidades.</p>
+                    <p><strong>O problema:</strong> Você é pego de surpresa por picos ou quedas na demanda.<br><strong>A solução com dados:</strong> Analise seus dados históricos de vendas para identificar sazonalidades e tendências. Isso permite planejar seu estoque e suas campanhas de marketing com antecedência.</p>
 
                     <h3>Conclusão: Pare de adivinhar, comece a decidir</h3>
-                    <p>A análise de dados não é um bicho de sete cabeças reservado para gigantes da tecnologia. É uma ferramenta poderosa e acessível que transforma a gestão de vendas de um jogo de azar em um exercício de estratégia. Começar pode ser tão simples quanto abrir uma planilha. O mais importante é mudar a mentalidade: cada interação com o cliente, cada venda, cada visita ao site é um dado valioso. Ao coletar, organizar e analisar essas informações, você deixa de ser um gestor que reage aos problemas e se torna um líder que antecipa oportunidades e constrói um crescimento sustentável e previsível.</p>
+                    <p>A análise de dados é uma ferramenta poderosa e acessível que transforma a gestão de vendas de um jogo de azar em um exercício de estratégia. Ao coletar, organizar e analisar essas informações, você deixa de ser um gestor que reage aos problemas e se torna um líder que antecipa oportunidades.</p>
+                </div>
+                
+                <!-- BLOCOS DE CONVERSÃO INSERIDOS AQUI -->
+                <div class="cta-blog-box">
+                    <h3>Pronto para transformar seus dados em resultados?</h3>
+                    <p>Minha especialidade é criar soluções inteligentes que geram valor real para o seu negócio. Vamos conversar sobre seu projeto.</p>
+                    <a href="index.html#contato" class="btn-primary">Solicitar Contato</a>
+                </div>
+
+                <div class="author-box">
+                    <img src="assets/Foto-Lucas-Escarabote.webp" alt="Foto de Lucas Silva">
+                    <div class="author-info">
+                        <h4>Lucas Silva</h4>
+                        <p>Analista Financeiro e desenvolvedor, especialista em transformar dados em insights estratégicos para PMEs. Apaixonado por resolver problemas reais com soluções inteligentes e aplicáveis.</p>
+                    </div>
                 </div>
                 
                 <!-- Botão de Voltar -->
                 <div class="blog-post-footer">
-                    <a href="blog.html" class="btn-primary">← Voltar para todos os posts</a>
+                    <a href="blog.html" class="btn-secondary">← Voltar para todos os posts</a>
                 </div>
             </div>
         </article>
