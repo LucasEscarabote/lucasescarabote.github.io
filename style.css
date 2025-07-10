@@ -1,5 +1,7 @@
 /* style.css */
-
+body {
+  white-space: normal;
+}
 /* Variáveis de Cores */
 :root {
   --primary-color: #f6545c;
@@ -71,7 +73,16 @@ a:hover {
 }
 
 .highlight {
+  text-align: center;
   color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .hero-content .text-content h1 span {
+    text-align: center; /* Centraliza o texto em telas pequenas */
+    /* display: flex;
+    align-items: center; */
+  }
 }
 
 /* Botões */
@@ -255,6 +266,7 @@ section {
 .hero-content .text-content h1 small {
   display: block;
   font-size: 0.6em;
+  margin-bottom: 14px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -724,6 +736,29 @@ section {
   font-size: 1.1em;
 }
 
+.menu {
+  display: none; /* Esconde o menu por padrão */
+}
+
+.menu.show {
+  display: flex; /* Mostra o menu quando a classe 'show' é adicionada */
+}
+
+.post-card {
+  background-color: #313131;
+  border-radius: 8px;
+  padding: 20px;
+}
+.cta-text-area h2 {
+  text-align: start;
+}
+
+@media (max-width: 768px) {
+  .cta-text-area h2 {
+    text-align: center; /* Centraliza o título em telas pequenas */
+  }
+}
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -964,7 +999,17 @@ footer {
 }
 
 /* Responsividade */
+h2,
+h3 {
+  text-align: center;
+}
 @media (max-width: 992px) {
+  .cta-form-area {
+    padding: 20px;
+  }
+  .metric-item {
+    padding: 20px 5px;
+  }
   .hero-content,
   .cta-content-grid {
     flex-direction: column;
@@ -998,6 +1043,36 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .header-content {
+    position: relative;
+  }
+  .menu-toggle {
+    /* width: 120px; */
+    height: 50px;
+    z-index: 100 !important;
+    background-color: rgba(26, 26, 26, 0.9);
+    display: block; /* Exibe o botão de menu em telas pequenas */
+    background-color: transparent; /* Fundo transparente para o botão */
+    border: none; /* Remove bordas do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  }
+  .menu {
+    display: none; /* Esconde o menu por padrão em telas pequenas */
+    position: absolute;
+    top: 50px; /* Ajuste conforme necessário */
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Cor de fundo do menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Certifique-se de que o menu fique acima de outros elementos */
+  }
+
+  .menu.show {
+    display: block; /* Exibe o menu quando a classe 'show' é adicionada */
+  }
+}
+
+@media (max-width: 768px) {
   h1 {
     font-size: 2.5em;
   }
@@ -1009,7 +1084,8 @@ footer {
   }
 
   .header-content {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 15px;
   }
 
@@ -1017,7 +1093,9 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    display: none;
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.9) !important;
+    /* display: none; */
   }
 
   /* NOVO: Mostra o menu quando a classe 'active' é adicionada via JS */
@@ -1029,20 +1107,6 @@ footer {
     padding: 10px 0;
     width: 100%;
     text-align: center;
-  }
-
-  /* NOVO: Estilo para o botão do menu hamburguer */
-  .menu-toggle {
-    display: block; /* Mostra o botão no mobile */
-    background: transparent;
-    border: none;
-    position: absolute;
-    right: 20px;
-    color: var(--text-light);
-    font-size: 1.8em;
-    cursor: pointer;
-    z-index: 1001; /* Acima do menu */
-    padding: 5px 10px;
   }
 
   .project-grid {
@@ -1074,6 +1138,7 @@ footer {
 }
 
 .blog-header h1 {
+  text-align: center;
   font-size: 3rem;
   color: #1a1a1a;
   margin-bottom: 10px;
@@ -1088,11 +1153,12 @@ footer {
 
 .blog-list-container {
   display: flex;
+  flex-wrap: wrap;
   /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -1106,6 +1172,7 @@ footer {
 
 .blog-list-item {
   max-width: 320px;
+  padding: 0px 0px 20px 0px;
   height: auto;
   background-color: #fff;
   border-radius: 8px;
