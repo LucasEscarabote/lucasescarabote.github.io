@@ -36,8 +36,8 @@
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#servicos">Como Posso Ajudar</a></li>
-            <li><a href="automacao-financeira-pme.html">Blog</a></li>
-            <!-- Link para o primeiro post do blog -->
+            <!-- ATUALIZADO: Link para a página de blog, abrindo em nova aba -->
+            <li><a href="blog.html" target="_blank">Blog</a></li>
             <li><a href="#contato" class="btn-contato">Contato</a></li>
           </ul>
         </nav>
@@ -46,9 +46,7 @@
 
     <main>
       <section id="banner" class="hero-section">
-        <!-- VÍDEO REMOVIDO - Fundo agora definido por cor hexadecimal no CSS -->
         <div class="video-overlay"></div>
-
         <div class="container hero-content">
           <div class="text-content">
             <h1>
@@ -72,7 +70,9 @@
 
       <section id="sobre" class="about-section">
         <div class="container">
-          <h2>O que oferecemos para ajudar a sua empresa a crescer</h2>
+          <h2 class="section-title">
+            O que oferecemos para ajudar a sua empresa a crescer
+          </h2>
           <div class="about-content">
             <p>
               Desenvolvo <strong>soluções digitais 100% especializadas</strong>,
@@ -102,7 +102,7 @@
 
       <section id="porque-projetos" class="why-projects-section">
         <div class="container">
-          <h2>Por que nossos projetos dão certo?</h2>
+          <h2 class="section-title">Por que nossos projetos dão certo?</h2>
           <div class="why-projects-grid">
             <div class="why-card">
               <i class="fas fa-brain"></i>
@@ -142,7 +142,7 @@
 
       <section id="habilidades" class="skills-section">
         <div class="container">
-          <h2>Minhas Habilidades</h2>
+          <h2 class="section-title">Minhas Habilidades</h2>
           <div class="skills-grid">
             <div class="skill-card">
               <img
@@ -201,12 +201,11 @@
 
       <section id="projetos" class="projects-section-new">
         <div class="container">
-          <h2>Projetos que Geram Valor</h2>
+          <h2 class="section-title">Projetos que Geram Valor</h2>
           <p class="section-subtitle">
             Explore algumas das soluções que desenvolvi para enfrentar desafios
             reais de negócio.
           </p>
-
           <div class="project-filters">
             <button class="filter-btn active" data-filter="all">Todos</button>
             <button class="filter-btn" data-filter="data-analysis">
@@ -219,7 +218,6 @@
               Desenvolvimento Web
             </button>
           </div>
-
           <div class="project-grid">
             <div
               class="project-card-new"
@@ -238,7 +236,6 @@
                 </div>
               </div>
             </div>
-
             <div
               class="project-card-new"
               data-category="automation data-analysis"
@@ -256,7 +253,6 @@
                 </div>
               </div>
             </div>
-
             <div
               class="project-card-new"
               data-category="web-dev"
@@ -274,7 +270,6 @@
                 </div>
               </div>
             </div>
-
             <div
               class="project-card-new"
               data-category="web-dev"
@@ -298,7 +293,7 @@
 
       <section id="servicos" class="services-section">
         <div class="container">
-          <h2>Como Posso Ajudar Sua Empresa</h2>
+          <h2 class="section-title">Como Posso Ajudar Sua Empresa</h2>
           <div class="services-grid">
             <div class="service-card">
               <i class="fas fa-handshake"></i>
@@ -358,15 +353,15 @@
 
       <section id="blog" class="blog-section">
         <div class="container">
-          <h2>Últimos Posts do Blog</h2>
-          <p>
+          <h2 class="section-title">Últimos Posts do Blog</h2>
+          <p class="section-subtitle">
             Aqui você encontrará artigos sobre insights de mercado, tendências
             em tecnologia e dicas de gestão para impulsionar seu negócio.
           </p>
           <div class="blog-grid">
-            <div class="blog-post-card">
+            <div class="post-card">
               <h3>A Importância da Automação Financeira em PMEs</h3>
-              <p class="blog-date">15 de Junho, 2025</p>
+              <p class="post-date">15 de Junho, 2025</p>
               <p>
                 Descubra como a automação pode revolucionar o setor financeiro
                 da sua pequena e média empresa...
@@ -375,27 +370,27 @@
                 >Ler Mais</a
               >
             </div>
-            <div class="blog-post-card">
+            <div class="post-card">
               <h3>KPIs Essenciais para Gestores de Projetos</h3>
-              <p class="blog-date">01 de Julho, 2025</p>
+              <p class="post-date">01 de Julho, 2025</p>
               <p>
                 Conheça as métricas que realmente importam para acompanhar a
                 performance dos seus projetos...
               </p>
               <a href="#" class="btn-secondary">Ler Mais</a>
             </div>
-            <div class="blog-post-card">
+            <div class="post-card">
               <h3>Como a Análise de Dados Impulsiona Vendas</h3>
-              <p class="blog-date">20 de Julho, 2025</p>
+              <p class="post-date">20 de Julho, 2025</p>
               <p>
                 Entenda como transformar dados de vendas em estratégias eficazes
                 para aumentar seu faturamento...
               </p>
               <a href="#" class="btn-secondary">Ler Mais</a>
             </div>
-            <div class="blog-post-card">
+            <div class="post-card">
               <h3>O Poder da Automação com Python</h3>
-              <p class="blog-date">05 de Agosto, 2025</p>
+              <p class="post-date">05 de Agosto, 2025</p>
               <p>
                 Explore como a linguagem Python pode automatizar tarefas
                 repetitivas e impulsionar a eficiência do seu negócio...
@@ -403,7 +398,11 @@
               <a href="#" class="btn-secondary">Ler Mais</a>
             </div>
           </div>
-          <a href="#" class="btn-primary" style="margin-top: 40px"
+          <a
+            href="blog.html"
+            target="_blank"
+            class="btn-primary"
+            style="margin-top: 40px"
             >Ver Todos os Posts</a
           >
         </div>
@@ -443,7 +442,6 @@
           <div class="cta-form-area">
             <h3>Vamos conversar</h3>
             <p>Lucas Silva está pronto para tirar seu projeto do papel.</p>
-            <!-- FORMULÁRIO HTML PERSONALIZADO COM ACTION PARA APPS SCRIPT -->
             <form
               id="contactForm"
               class="cta-form"
@@ -473,13 +471,11 @@
                 SOLICITAR CONTATO
               </button>
             </form>
-            <!-- Mensagem de feedback do formulário (sucesso/erro) -->
             <div
               id="formMessage"
               class="form-message"
               style="display: none"
             ></div>
-            <!-- FIM DO FORMULÁRIO HTML PERSONALIZADO -->
             <p class="form-note">
               Ao enviar este formulário, concordo com os termos de privacidade.
             </p>
@@ -620,6 +616,7 @@
     <footer>
       <div class="container footer-content">
         <p>© 2025 Lucas Silva. Todos os direitos reservados.</p>
+        <p>CNPJ: 49.092.963/0001-51</p>
         <p>Desenvolvido com paixão por dados e soluções.</p>
       </div>
     </footer>

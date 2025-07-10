@@ -14,7 +14,11 @@
     <header id="home">
         <div class="container header-content">
             <a href="index.html" class="logo">Lucas Silva<span>.dev</span></a>
-            <nav>
+            <!-- Botão do Menu Hamburguer para Mobile -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="index.html#sobre">Sobre Mim</a></li>
                     <li><a href="index.html#habilidades">Habilidades</a></li>
@@ -31,8 +35,8 @@
         <section class="blog-page-section">
             <div class="container">
                 <div class="blog-header">
-                    <h1>Blog de Insights</h1>
-                    <p>Análises, dicas e tendências sobre gestão, dados e tecnologia para impulsionar seu negócio.</p>
+                    <h1 class="section-title">Blog de Insights</h1>
+                    <p class="section-subtitle">Análises, dicas e tendências sobre gestão, dados e tecnologia para impulsionar seu negócio.</p>
                 </div>
 
                 <div class="blog-list-container">
@@ -62,7 +66,7 @@
                         </div>
                     </article>
 
-                    <!-- Artigo 3: Análise de Dados (NOVO) -->
+                    <!-- Artigo 3: Análise de Dados -->
                     <article class="blog-list-item">
                         <a href="analise-de-dados-impulsiona-vendas.html">
                             <img src="assets/blog-dados-vendas.webp" alt="Como a Análise de Dados Impulsiona Vendas" class="blog-item-image">
@@ -82,9 +86,11 @@
     <footer>
         <div class="container footer-content">
             <p>© 2025 Lucas Silva. Todos os direitos reservados.</p>
+            <p>CNPJ: 49.092.963/0001-51</p>
             <p>Desenvolvido com paixão por dados e soluções.</p>
         </div>
     </footer>
-
+    
+    <script src="script.js"></script>
 </body>
 </html>
