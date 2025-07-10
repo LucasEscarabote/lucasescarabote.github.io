@@ -41,14 +41,18 @@ h6 {
   color: var(--text-light);
 }
 
+/* ATUALIZADO: Alinhamento geral de H1, H2, H3 para esquerda por padrão */
 h1 {
   font-size: 3em;
+  text-align: left; /* NOVO */
 }
 h2 {
   font-size: 2.5em;
+  text-align: left; /* NOVO */
 }
 h3 {
   font-size: 2em;
+  text-align: left; /* NOVO */
 }
 
 p {
@@ -192,17 +196,17 @@ section {
 
 /* REMOVIDO: Estilos relacionados ao vídeo */
 /* .background-video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: 1;
-      transform: translateX(-50%) translateY(-50%);
-      background-size: cover;
-    } */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+} */
 
 .video-overlay {
   position: absolute;
@@ -1006,7 +1010,29 @@ footer {
     display: none;
   }
 
-  /* ALTERAÇÃO AQUI: Em telas menores, a grid de projetos passa para 1 coluna */
+  /* NOVO: Mostra o menu quando a classe 'active' é adicionada via JS */
+  header nav ul.active {
+    display: flex;
+  }
+
+  header nav ul li a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* NOVO: Estilo para o botão do menu hamburguer */
+  .menu-toggle {
+    display: block; /* Mostra o botão no mobile */
+    background: transparent;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.8em;
+    cursor: pointer;
+    z-index: 1001; /* Acima do menu */
+    padding: 5px 10px;
+  }
+
   .project-grid {
     grid-template-columns: 1fr;
   }
