@@ -1,423 +1,293 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      O Guia Definitivo de KPIs para Gestores de Projetos | Lucas Silva.dev
-    </title>
-    <meta
-      name="description"
-      content="Guia completo sobre os KPIs para gestão de projetos. Aprenda a usar métricas de tempo, custo, qualidade e escopo para garantir o sucesso dos seus projetos."
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Guia Definitivo de KPIs para Gestores de Projetos | Lucas Silva.dev</title>
+    <meta name="description" content="Guia completo sobre os KPIs para gestão de projetos. Aprenda a usar métricas de tempo, custo, qualidade e escopo para garantir o sucesso dos seus projetos.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-      /* Estilos específicos para a página do blog post */
-      .blog-post-container {
-        max-width: 900px;
-        margin: 120px auto 80px auto;
-        padding: 40px 30px;
-        background-color: #fff; /* Fundo branco para melhor legibilidade */
-        border-radius: 15px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        color: var(--text-dark); /* Texto escuro sobre fundo claro */
-        line-height: 1.8;
-      }
-      .blog-post-header .blog-post-category {
-        color: var(--primary-color);
-        font-weight: 600;
-        text-transform: uppercase;
-      }
-      .blog-post-container h1 {
-        font-size: 3.2em;
-        margin-bottom: 15px;
-        color: var(--dark-background);
-        text-align: left;
-        padding-top: 0;
-        line-height: 1.2;
-      }
-      .blog-post-meta {
-        text-align: left;
-        color: #666;
-        font-size: 0.95em;
-        margin-bottom: 40px;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 20px;
-      }
-      .blog-post-banner-image {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        margin-bottom: 40px;
-      }
-      .blog-post-content h2,
-      .blog-post-content h3,
-      .blog-post-content h4,
-      .blog-post-content h5 {
-        text-align: left;
-        color: var(--dark-background);
-        margin-top: 40px;
-        margin-bottom: 20px;
-      }
-      .blog-post-content h2 {
-        font-size: 2.2em;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 10px;
-      }
-      .blog-post-content h3 {
-        font-size: 1.8em;
-      }
-      .blog-post-content h4 {
-        font-size: 1.5em;
-      }
-      .blog-post-content h5 {
-        font-size: 1.2em;
-        color: #333;
-      }
+        /* Estilos específicos para a página do blog post */
+        .blog-post-container {
+            max-width: 900px;
+            margin: 120px auto 80px auto;
+            padding: 40px 30px;
+            background-color: #fff; /* Fundo branco para melhor legibilidade */
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            color: var(--text-dark); /* Texto escuro sobre fundo claro */
+            line-height: 1.8;
+        }
+        .blog-post-header .blog-post-category {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .blog-post-container h1 {
+            font-size: 3.2em;
+            margin-bottom: 15px;
+            color: var(--dark-background);
+            text-align: left;
+            padding-top: 0;
+            line-height: 1.2;
+        }
+        .blog-post-meta {
+            text-align: left;
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .blog-post-banner-image {
+             width: 100%;
+             height: auto;
+             border-radius: 10px;
+             margin-bottom: 40px;
+        }
+        .blog-post-content h2,
+        .blog-post-content h3,
+        .blog-post-content h4,
+        .blog-post-content h5 {
+            text-align: left;
+            color: var(--dark-background);
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .blog-post-content h2 { font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 10px;}
+        .blog-post-content h3 { font-size: 1.8em; }
+        .blog-post-content h4 { font-size: 1.5em; }
+        .blog-post-content h5 { font-size: 1.2em; color: #333; }
 
-      .blog-post-content p,
-      .blog-post-content ul li,
-      .blog-post-content ol li {
-        margin-bottom: 20px;
-        font-size: 1.1em;
-        color: #333;
-        text-align: left;
-      }
-      .blog-post-content strong {
-        color: var(--primary-color);
-      }
-      .blog-post-content ul,
-      .blog-post-content ol {
-        list-style-position: inside;
-        padding-left: 0;
-        margin-bottom: 25px;
-      }
-      .table-container {
-        overflow-x: auto;
-        margin: 30px 0;
-      }
-      .table-container table {
-        width: 100%;
-        border-collapse: collapse;
-        text-align: left;
-      }
-      .table-container th,
-      .table-container td {
-        padding: 12px 15px;
-        border: 1px solid #ddd;
-      }
-      .table-container th {
-        background-color: #f8f8f8;
-        font-weight: 600;
-      }
-
-      /* --- ESTILOS DE CONVERSÃO --- */
-      .cta-blog-box {
-        background-color: #f0f4f8;
-        border-left: 5px solid var(--primary-color);
-        padding: 30px;
-        margin: 50px 0;
-        border-radius: 8px;
-        text-align: center;
-      }
-      .cta-blog-box h3 {
-        color: var(--dark-background);
-        font-size: 1.8em;
-        margin-top: 0;
-        margin-bottom: 15px;
-      }
-      .cta-blog-box p {
-        color: #333;
-        font-size: 1.1em;
-        margin-bottom: 25px;
-        text-align: center;
-      }
-      .author-box {
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        background-color: #fff;
-        padding: 25px;
-        border-radius: 8px;
-        margin-top: 40px;
-        border: 1px solid #e0e0e0;
-      }
-      .author-box img {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-      .author-box .author-info h4 {
-        margin: 0 0 10px 0;
-        font-size: 1.4em;
-        color: var(--dark-background);
-        text-align: left;
-      }
-      .author-box .author-info p {
-        margin: 0;
-        font-size: 0.95em;
-        color: #555;
-        line-height: 1.5;
-        text-align: left;
-      }
-      .blog-post-footer {
-        text-align: center;
-        margin-top: 40px;
-      }
+        .blog-post-content p, 
+        .blog-post-content ul li,
+        .blog-post-content ol li {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #333;
+            text-align: left;
+        }
+        .blog-post-content strong {
+            color: var(--primary-color);
+        }
+        .blog-post-content ul,
+        .blog-post-content ol {
+            list-style-position: inside;
+            padding-left: 0;
+            margin-bottom: 25px;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        .table-container th, .table-container td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+        .table-container th {
+            background-color: #f8f8f8;
+            font-weight: 600;
+        }
+        
+        /* --- ESTILOS DE CONVERSÃO --- */
+        .cta-blog-box {
+            background-color: #f0f4f8;
+            border-left: 5px solid var(--primary-color);
+            padding: 30px;
+            margin: 50px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .cta-blog-box h3 {
+            color: var(--dark-background);
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .cta-blog-box p {
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 40px;
+            border: 1px solid #e0e0e0;
+        }
+        .author-box img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .author-box .author-info h4 {
+            margin: 0 0 10px 0;
+            font-size: 1.4em;
+            color: var(--dark-background);
+            text-align: left;
+        }
+        .author-box .author-info p {
+            margin: 0;
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.5;
+            text-align: left;
+        }
+        .blog-post-footer {
+            text-align: center;
+            margin-top: 40px;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+
     <!-- Header (Menu de Navegação) -->
     <header id="home">
-      <div class="container header-content">
-        <a href="index.html" class="logo">Lucas Silva<span>.dev</span></a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-          <i class="fas fa-bars"></i>
-        </button>
-        <nav class="menu" id="menu">
-          <ul>
-            <li><a href="index.html#sobre">Sobre Mim</a></li>
-            <li><a href="index.html#habilidades">Habilidades</a></li>
-            <li><a href="index.html#projetos">Projetos</a></li>
-            <li><a href="index.html#servicos">Como Posso Ajudar</a></li>
-            <li><a href="blog.html" target="_blank">Blog</a></li>
-            <li>
-              <a href="index.html#contato" class="btn-contato">Contato</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Lucas Silva<span>.dev</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#sobre">Sobre Mim</a></li>
+                    <li><a href="index.html#habilidades">Habilidades</a></li>
+                    <li><a href="index.html#projetos">Projetos</a></li>
+                    <li><a href="index.html#servicos">Como Posso Ajudar</a></li>
+                    <li><a href="blog.html" target="_blank">Blog</a></li>
+                    <li><a href="index.html#contato" class="btn-contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-      <article class="blog-post-container">
-        <div class="container">
-          <!-- Cabeçalho do Artigo -->
-          <header class="blog-post-header">
-            <span class="blog-post-category">Gestão de Projetos</span>
-            <h1>O Guia Definitivo de KPIs para Gestores de Projetos</h1>
-            <p class="blog-post-meta">
-              Publicado em 10 de Julho, 2025 por Lucas Silva
-            </p>
-            <img
-              src="assets/blog-kpis-banner.webp"
-              alt="Dashboard com KPIs de gestão de projetos"
-              class="blog-post-banner-image"
-            />
-          </header>
+        <article class="blog-post-container">
+            <div class="container">
+                <!-- Cabeçalho do Artigo -->
+                <header class="blog-post-header">
+                    <span class="blog-post-category">Gestão de Projetos</span>
+                    <h1>O Guia Definitivo de KPIs para Gestores de Projetos</h1>
+                    <p class="blog-post-meta">Publicado em 10 de Julho, 2025 por Lucas Silva</p>
+                    <img src="assets/blog-kpis-banner.webp" alt="Dashboard com KPIs de gestão de projetos" class="blog-post-banner-image">
+                </header>
 
-          <!-- Conteúdo do Artigo -->
-          <div class="blog-post-content">
-            <h2>
-              Introdução: Navegando a Complexidade de Projetos com Insights
-              Baseados em Dados
-            </h2>
-            <p>
-              A gestão de projetos moderna impõe uma pressão sem precedentes
-              sobre seus líderes. Eles devem equilibrar com maestria o
-              "triângulo de ferro" — escopo, tempo e custo — enquanto gerenciam
-              as expectativas de stakeholders, mantêm o moral da equipe elevado
-              e, acima de tudo, entregam valor tangível ao negócio. Nesse
-              cenário de alta complexidade, navegar sem dados é como pilotar sem
-              instrumentos. Os Indicadores-Chave de Desempenho, ou KPIs (Key
-              Performance Indicators), surgem não como meras ferramentas de
-              relatório, mas como o sistema de navegação essencial para o gestor
-              de projetos orientado por dados.
-            </p>
+                <!-- Conteúdo do Artigo -->
+                <div class="blog-post-content">
+                    <h2>Introdução: Navegando a Complexidade de Projetos com Insights Baseados em Dados</h2>
+                    <p>A gestão de projetos moderna impõe uma pressão sem precedentes sobre seus líderes. Eles devem equilibrar com maestria o "triângulo de ferro" — escopo, tempo e custo — enquanto gerenciam as expectativas de stakeholders, mantêm o moral da equipe elevado e, acima de tudo, entregam valor tangível ao negócio. Nesse cenário de alta complexidade, navegar sem dados é como pilotar sem instrumentos. Os Indicadores-Chave de Desempenho, ou KPIs (Key Performance Indicators), surgem não como meras ferramentas de relatório, mas como o sistema de navegação essencial para o gestor de projetos orientado por dados.</p>
 
-            <h3>
-              Seção 1: Desconstruindo KPIs - De Métricas a Alavancas
-              Estratégicas
-            </h3>
-            <p>
-              Para utilizar os KPIs de forma eficaz, é crucial compreender sua
-              anatomia e seu papel dentro da estrutura organizacional. Eles não
-              são apenas números em um painel; são o elo entre a execução diária
-              do projeto e a estratégia global da empresa.
-            </p>
+                    <h3>Seção 1: Desconstruindo KPIs - De Métricas a Alavancas Estratégicas</h3>
+                    <p>Para utilizar os KPIs de forma eficaz, é crucial compreender sua anatomia e seu papel dentro da estrutura organizacional. Eles não são apenas números em um painel; são o elo entre a execução diária do projeto e a estratégia global da empresa.</p>
+                    
+                    <h4>1.1 O Que é um KPI? A Diferença Crucial de uma Métrica</h4>
+                    <p>Um Indicador-Chave de Desempenho (KPI) é um valor quantificável que demonstra quão eficazmente um projeto está alcançando seus objetivos de negócio mais críticos. Embora todos os KPIs sejam métricas, é fundamental entender que nem toda métrica é um KPI. Uma métrica simplesmente rastreia uma atividade ou um processo. Um KPI, por outro lado, é uma métrica deliberadamente selecionada por sua conexão direta com um objetivo estratégico.</p>
 
-            <h4>1.1 O Que é um KPI? A Diferença Crucial de uma Métrica</h4>
-            <p>
-              Um Indicador-Chave de Desempenho (KPI) é um valor quantificável
-              que demonstra quão eficazmente um projeto está alcançando seus
-              objetivos de negócio mais críticos. Embora todos os KPIs sejam
-              métricas, é fundamental entender que nem toda métrica é um KPI.
-              Uma métrica simplesmente rastreia uma atividade ou um processo. Um
-              KPI, por outro lado, é uma métrica deliberadamente selecionada por
-              sua conexão direta com um objetivo estratégico.
-            </p>
+                    <h4>1.2 A Anatomia de um KPI Eficaz: O Framework SMART</h4>
+                    <p>A definição de KPIs eficazes não deve ser um exercício de adivinhação. O framework SMART é amplamente reconhecido como o padrão ouro para garantir que os indicadores sejam robustos, claros e úteis. Um KPI bem definido deve ser:</p>
+                    <ul>
+                        <li><strong>Specific (Específico):</strong> Claro, bem definido e sem ambiguidades.</li>
+                        <li><strong>Measurable (Mensurável):</strong> Quantificável para permitir o rastreamento objetivo.</li>
+                        <li><strong>Achievable (Atingível):</strong> Realista e alcançável.</li>
+                        <li><strong>Relevant (Relevante):</strong> Diretamente ligado aos fatores de sucesso do projeto.</li>
+                        <li><strong>Time-bound (Temporal):</strong> Associado a um prazo específico para seu alcance.</li>
+                    </ul>
 
-            <h4>1.2 A Anatomia de um KPI Eficaz: O Framework SMART</h4>
-            <p>
-              A definição de KPIs eficazes não deve ser um exercício de
-              adivinhação. O framework SMART é amplamente reconhecido como o
-              padrão ouro para garantir que os indicadores sejam robustos,
-              claros e úteis. Um KPI bem definido deve ser:
-            </p>
-            <ul>
-              <li>
-                <strong>Specific (Específico):</strong> Claro, bem definido e
-                sem ambiguidades.
-              </li>
-              <li>
-                <strong>Measurable (Mensurável):</strong> Quantificável para
-                permitir o rastreamento objetivo.
-              </li>
-              <li>
-                <strong>Achievable (Atingível):</strong> Realista e alcançável.
-              </li>
-              <li>
-                <strong>Relevant (Relevante):</strong> Diretamente ligado aos
-                fatores de sucesso do projeto.
-              </li>
-              <li>
-                <strong>Time-bound (Temporal):</strong> Associado a um prazo
-                específico para seu alcance.
-              </li>
-            </ul>
+                    <h3>Seção 2: As Dimensões Centrais do Desempenho de Projetos</h3>
+                    <p>Para obter uma visão holística da saúde de um projeto, os gestores devem monitorar KPIs em várias dimensões críticas.</p>
+                    
+                    <h4>2.1 Dominando a Restrição Tripla: Tempo e Custo com a Gestão do Valor Agregado (GVA)</h4>
+                    <p>A Gestão do Valor Agregado (GVA), ou Earned Value Management (EVM), é uma metodologia poderosa que integra as linhas de base de escopo, cronograma e custo para fornecer uma medida objetiva do desempenho do projeto.</p>
+                    
+                    <h5>Exemplo Prático Detalhado (Projeto de Construção)</h5>
+                    <p>Vamos considerar um projeto com orçamento de R$ 1.000.000. No Mês 3, o plano (VP) era ter concluído 30% (R$ 300.000). A medição real mostrou que apenas 25% (VA = R$ 250.000) foi concluído, com um Custo Real (CR) de R$ 280.000.</p>
+                    <ul>
+                        <li><strong>VC:</strong> R$250k − R$280k = <strong>-R$30k</strong> (acima do orçamento).</li>
+                        <li><strong>IDC:</strong> R$250k / R$280k = <strong>0.89</strong> (ineficiente).</li>
+                        <li><strong>VPr:</strong> R$250k − R$300k = <strong>-R$50k</strong> (atrasado).</li>
+                        <li><strong>IDP:</strong> R$250k / R$300k = <strong>0.83</strong> (lento).</li>
+                    </ul>
 
-            <h3>Seção 2: As Dimensões Centrais do Desempenho de Projetos</h3>
-            <p>
-              Para obter uma visão holística da saúde de um projeto, os gestores
-              devem monitorar KPIs em várias dimensões críticas.
-            </p>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Indicador (KPI)</th>
+                                    <th>Fórmula</th>
+                                    <th>Interpretação do Resultado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Variação de Custo (VC)</td>
+                                    <td>VA − CR</td>
+                                    <td>> 0: Favorável | < 0: Desfavorável</td>
+                                </tr>
+                                <tr>
+                                    <td>Índice de Desempenho de Custo (IDC)</td>
+                                    <td>VA / CR</td>
+                                    <td>> 1: Eficiente | < 1: Ineficiente</td>
+                                </tr>
+                                <tr>
+                                    <td>Variação de Prazo (VPr)</td>
+                                    <td>VA − VP</td>
+                                    <td>> 0: Adiantado | < 0: Atrasado</td>
+                                </tr>
+                                <tr>
+                                    <td>Índice de Desempenho de Prazo (IDP)</td>
+                                    <td>VA / VP</td>
+                                    <td>> 1: Adiantado | < 1: Atrasado</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3>Conclusão: O Gestor de Projetos Proativo</h3>
+                    <p>A gestão de projetos eficaz na era moderna é uma disciplina orientada por dados. A implementação bem-sucedida de KPIs marca a transição de um gestor reativo para um líder proativo. Não se trata de olhar no espelho retrovisor, mas de usar os KPIs como uma bússola para guiar o projeto ao sucesso.</p>
+                </div>
+                
+                <!-- BLOCOS DE CONVERSÃO INSERIDOS AQUI -->
+                <div class="cta-blog-box">
+                    <h3>Pronto para transformar seus dados em resultados?</h3>
+                    <p>Minha especialidade é criar soluções inteligentes que geram valor real para o seu negócio. Vamos conversar sobre seu projeto.</p>
+                    <a href="index.html#contato" class="btn-primary">Solicitar Contato</a>
+                </div>
 
-            <h4>
-              2.1 Dominando a Restrição Tripla: Tempo e Custo com a Gestão do
-              Valor Agregado (GVA)
-            </h4>
-            <p>
-              A Gestão do Valor Agregado (GVA), ou Earned Value Management
-              (EVM), é uma metodologia poderosa que integra as linhas de base de
-              escopo, cronograma e custo para fornecer uma medida objetiva do
-              desempenho do projeto.
-            </p>
-
-            <h5>Exemplo Prático Detalhado (Projeto de Construção)</h5>
-            <p>
-              Vamos considerar um projeto com orçamento de R$ 1.000.000. No Mês
-              3, o plano (VP) era ter concluído 30% (R$ 300.000). A medição real
-              mostrou que apenas 25% (VA = R$ 250.000) foi concluído, com um
-              Custo Real (CR) de R$ 280.000.
-            </p>
-            <ul>
-              <li>
-                <strong>VC:</strong> R$250k − R$280k =
-                <strong>-R$30k</strong> (acima do orçamento).
-              </li>
-              <li>
-                <strong>IDC:</strong> R$250k / R$280k =
-                <strong>0.89</strong> (ineficiente).
-              </li>
-              <li>
-                <strong>VPr:</strong> R$250k − R$300k =
-                <strong>-R$50k</strong> (atrasado).
-              </li>
-              <li>
-                <strong>IDP:</strong> R$250k / R$300k =
-                <strong>0.83</strong> (lento).
-              </li>
-            </ul>
-
-            <div class="table-container">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Indicador (KPI)</th>
-                    <th>Fórmula</th>
-                    <th>Interpretação do Resultado</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Variação de Custo (VC)</td>
-                    <td>VA − CR</td>
-                    <td>> 0: Favorável | < 0: Desfavorável</td>
-                  </tr>
-                  <tr>
-                    <td>Índice de Desempenho de Custo (IDC)</td>
-                    <td>VA / CR</td>
-                    <td>> 1: Eficiente | < 1: Ineficiente</td>
-                  </tr>
-                  <tr>
-                    <td>Variação de Prazo (VPr)</td>
-                    <td>VA − VP</td>
-                    <td>> 0: Adiantado | < 0: Atrasado</td>
-                  </tr>
-                  <tr>
-                    <td>Índice de Desempenho de Prazo (IDP)</td>
-                    <td>VA / VP</td>
-                    <td>> 1: Adiantado | < 1: Atrasado</td>
-                  </tr>
-                </tbody>
-              </table>
+                <div class="author-box">
+                    <img src="assets/Foto-Lucas-Escarabote.webp" alt="Foto de Lucas Silva">
+                    <div class="author-info">
+                        <h4>Lucas Silva</h4>
+                        <p>Analista Financeiro e desenvolvedor, especialista em transformar dados em insights estratégicos para Pequenas e Grandes Empresas. Apaixonado por resolver problemas reais com soluções inteligentes e aplicáveis.</p>
+                    </div>
+                </div>
+                
+                <!-- Botão de Voltar -->
+                <div class="blog-post-footer">
+                    <a href="blog.html" class="btn-secondary">← Voltar para todos os posts</a>
+                </div>
             </div>
-
-            <h3>Conclusão: O Gestor de Projetos Proativo</h3>
-            <p>
-              A gestão de projetos eficaz na era moderna é uma disciplina
-              orientada por dados. A implementação bem-sucedida de KPIs marca a
-              transição de um gestor reativo para um líder proativo. Não se
-              trata de olhar no espelho retrovisor, mas de usar os KPIs como uma
-              bússola para guiar o projeto ao sucesso.
-            </p>
-          </div>
-
-          <!-- BLOCOS DE CONVERSÃO INSERIDOS AQUI -->
-          <div class="cta-blog-box">
-            <h3>Pronto para transformar seus dados em resultados?</h3>
-            <p>
-              Minha especialidade é criar soluções inteligentes que geram valor
-              real para o seu negócio. Vamos conversar sobre seu projeto.
-            </p>
-            <a href="index.html#contato" class="btn-primary"
-              >Solicitar Contato</a
-            >
-          </div>
-
-          <div class="author-box">
-            <img
-              src="assets/Foto-Lucas-Escarabote.webp"
-              alt="Foto de Lucas Silva"
-            />
-            <div class="author-info">
-              <h4>Lucas Silva</h4>
-              <p>
-                Analista Financeiro e desenvolvedor, especialista em transformar
-                dados em insights estratégicos para Pequenas e Grandes Empresas.
-                Apaixonado por resolver problemas reais com soluções
-                inteligentes e aplicáveis.
-              </p>
-            </div>
-          </div>
-
-          <!-- Botão de Voltar -->
-          <div class="blog-post-footer">
-            <a href="blog.html" class="btn-secondary"
-              >← Voltar para todos os posts</a
-            >
-          </div>
-        </div>
-      </article>
+        </article>
     </main>
 
     <!-- Footer -->
     <footer>
-      <div class="container footer-content">
-        <p>© 2025 Lucas Silva. Todos os direitos reservados.</p>
-        <p>Desenvolvido com paixão por dados e soluções.</p>
-      </div>
+        <div class="container footer-content">
+            <p>© 2025 Lucas Silva. Todos os direitos reservados.</p>
+            <p>Desenvolvido com paixão por dados e soluções.</p>
+        </div>
     </footer>
-  </body>
+
+</body>
 </html>
